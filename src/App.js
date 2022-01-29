@@ -3,6 +3,7 @@ import TextFrom from './components/TextFrom';
 import './App.css';
 import Alart from './components/Alart';
 import { useState } from 'react';
+// import About from './components/About';
 function App() {
   const [alart, setAlart] = useState(null);
 
@@ -14,13 +15,14 @@ function App() {
   }
   setTimeout(() => {
     setAlart(null);
-  }, 1000);
+  }, 1500);
   return (
     <>
     <Navbar logoTitle="Conveter"/>
     <Alart alart={alart}/>
     <div className="container">
       <TextFrom showAlart={showAlart} heading="Enter your text here"/>
+      {/* <About/> */}
     </div>
     </>
   );
